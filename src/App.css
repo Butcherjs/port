@@ -1,0 +1,359 @@
+/* App.css */
+html {
+  scroll-behavior: smooth;
+}
+
+
+:root {
+  --background-color: #1D1F21; /* Dark Slate */
+  --secondary-accent: #1E90FF; /* Neon Blue */
+  --text-color: #E0E0E0;        /* Light Gray */
+  --hover-color: #00FFFF;       /* Bright Cyan */
+}
+body {
+  font-family: 'NTR', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  background-size: cover;
+  color: white;
+
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+nav {
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--background-color);
+;
+  
+}
+
+.name{
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 32px;
+  
+}
+
+.nav-links a{
+  color: var(--text-color);
+  padding: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.nav-links a:hover{
+  color:var(--hover-color);
+}
+.header-content{
+  flex-wrap: nowrap;
+  align-items: center;
+  display: flex;
+}
+
+.nav-links{
+  position: fixed;
+  left: 20%;
+}
+
+
+
+#home-content{
+  
+  width: 1050px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 1000px;
+  min-height: 100vh;
+  padding-top: 200px;
+  color: var(--text-color);
+}
+
+.typewriter{
+  display: inline-block;
+  width: 65%;
+  font-family: 'NTR', sans-serif;
+}
+
+.intro {
+   color:var(--hover-color);
+  ;
+}
+
+.text{
+  font-family: 'NTR', sans-serif;
+  font-size: 70px;
+  letter-spacing: 5px; /* Keep letter-spacing for the typing effect */
+  border-right: 5px solid;
+  border-radius: 1px;
+  border-color: var(--hover-color);
+  width: 100%;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: 
+            typing 2s steps(16),
+            cursor 1.5s linear infinite;
+}
+
+.rotating-cube {
+  height: 200px; /* Set a fixed height for the rotating cube */
+  display: flex; /* Optional: Align items in the center if needed */
+  justify-content: center; /* Optional: Center content horizontally */
+  align-items: center; /* Optional: Center content vertically */
+  left: 30%;
+  position: relative;
+}
+
+.button{
+  margin-top: 30px;
+}
+.button a{
+  color: var(--hover-color);
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 30px 30px;
+  font-weight: 800;
+}
+
+.fade-in-section {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(90px); /* Slight move for better effect */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth fade-in */
+}
+
+.fade-in-section.visible {
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Return to normal position */
+}
+
+.home-bio{
+    width: 1000px;
+}
+
+.home-bio h2{
+  color: var(--text-color);
+}
+
+#About {
+  
+  width: 1050px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 1000px;
+  min-height: 100vh;
+  padding-top: 200px;
+  position: relative; /* Makes it the reference point for absolute positioning */
+  margin-left: 80px;
+  color: var(--text-color);
+  
+}
+
+#Experience{
+  width: 1050px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 1000px;
+  min-height: 100vh;
+  padding-top: 200px;
+  position: relative; /* Makes it the reference point for absolute positioning */
+  margin-left: 80px;
+  color: var(--text-color);
+}
+
+.about-header {
+  align-self: flex-start; /* Aligns to the left corner */
+  margin-left: 20px; /* Add some margin for padding from the left side */
+  
+
+}
+
+.about-header h2 {
+  
+  font-weight: bold;
+  color: var(--text-color);
+  margin-right: 10px;
+  position: relative; /* Needed for ::after positioning */
+  font-size: 46px;
+  font-weight: 700;
+}
+
+.about-header h2::after {
+  content: "";
+  display: inline-block;
+  width: 600px; /* Length of the line */
+  height: 1px;  /* Thickness of the line */
+  background-color: #d4d4d4; /* Line color */
+  margin-left: 30px;
+  opacity: 0.5; /* Slight transparency */
+  vertical-align: middle; /* Aligns line with the text */
+}
+
+.about-description{
+  font-family: "NTR", sans-serif;
+  font-size: 27px;
+  text-align: justify;
+  color: var(--text-color);
+  font-weight: 300;  
+}
+
+.tech-list {
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: repeat(3, 2fr); /* Create 2 equal columns */
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 10px 0; /* Optional: Add margin for spacing */
+}
+
+.tech-list li {
+  margin: 10px; /* Space between items */
+  padding: 10px; /* Add padding inside each item */
+  
+  border-radius: 5px; /* Optional: Rounded corners */
+}
+
+.tech-list li::before{
+  content: "▹" ;
+  color: #4fd6ff;
+}
+
+
+p{
+  margin-bottom: 1rem;
+  margin-top: 0;
+  color: var(--text-color);
+  font-weight: 300;
+}
+
+.schools{
+  color: #4fd6ff;
+}
+
+.experience-header h2{
+  font-weight: bold;
+  color: var(--text-color);
+  margin-right: 10px;
+  position: relative; /* Needed for ::after positioning */
+  font-size: 46px;
+  font-weight: 700
+}
+/* cursor blinking */
+@keyframes cursor{
+
+  0% {
+    border-color: rgb(79, 214, 255); /* Fully visible */
+  }
+  25% {
+    border-color: rgba(0, 209, 178 0.8); /* Slightly faded */
+  }
+  50% {
+    border-color: rgba(0, 209, 178 0.4); /* More transparent */
+  }
+  75% {
+    border-color: rgba(0, 209, 178 0); /* Nearly invisible */
+  }
+  100% {
+    border-color: transparent; /* Fully invisible */
+  }
+}
+
+.experience-header h2::after {
+  content: "";
+  display: inline-block;
+  width: 600px; /* Length of the line */
+  height: 1px;  /* Thickness of the line */
+  background-color: #d4d4d4; /* Line color */
+  margin-left: 30px;
+  opacity: 0.5; /* Slight transparency */
+  vertical-align: middle; /* Aligns line with the text */
+}
+
+.tab-container {
+  display: flex;
+}
+
+.tab-titles {
+  display: flex;
+  flex-direction: column;
+  width: 400px; /* Set a fixed width for the titles to prevent wrapping */
+}
+
+.tab-title {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: transparent; /* Default background */
+  color: var(--text-color);
+  border: none;
+  font-family: "NTR", sans-serif;
+  font-size: 24px;
+  cursor: pointer; /* Add pointer cursor */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+
+.tab-content {
+  font-size: 27px;
+  font-family: "NTR", sans-serif;
+  padding-left: 10px; /* Adjust this value for desired spacing */
+  width: 1200px;  
+}
+
+.tab-content li {
+  padding-bottom: 50px;
+  list-style: none;
+}
+
+.tab-container li::before{
+  content: "▹" ;
+  color: #4fd6ff;
+}
+  
+
+/* Footer.css */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the items horizontally */
+  justify-content: center; /* Center the items vertically */
+  position: relative; /* Allow positioning */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px; /* Add some padding */
+  background-color: var(--background-color); /* Background color */
+  text-align: center; /* Center the text */
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+}
+
+.tab-title.active {
+  background-color: #4fd6ff; /* Change to your desired active color */
+  color: white; /* Change text color to contrast */
+}
+
+
+
+  
+  /* Tab title styles */
+
+
+
+
+
+@keyframes typing{
+  from {width: 0}
+ 
+}
